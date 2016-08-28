@@ -48,9 +48,10 @@ def identify_user():
         return
 
     try:
-        username, password = str(base64.b64decode(credentials,
-                                                  validate=True)).split(':')
-    except binascii.Error:
+        auth_string = base64.b64decode(credentials,
+                                       validate=True).decode('utf-8')
+        username, password = auth_string.split(':')
+    except:
         USER = 'nobody'
         return
 
