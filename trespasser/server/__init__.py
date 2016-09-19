@@ -4,4 +4,4 @@ from flask import Flask
 
 application = Flask(__name__)
 
-from trespasser import main
+from server import main
