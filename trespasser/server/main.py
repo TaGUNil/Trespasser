@@ -11,7 +11,7 @@ import base64
 import flask
 import werkzeug.routing
 
-from server import application, settings
+from trespasser.server import application, settings
 
 
 application.jinja_env.trim_blocks = True
